@@ -2,7 +2,7 @@ import { CircleLoader, EllipsisLoader, FaceBookLoader, RingLoader, GridLoader, R
 import React, { useState } from 'react'
 
 const Demo = () => {
-    const [color, setColor] = useState("")
+    const [color, setColor] = useState("black")
 
     return (
         <>
