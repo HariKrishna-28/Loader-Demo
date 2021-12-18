@@ -1,27 +1,39 @@
 import { CircleLoader, EllipsisLoader, FaceBookLoader, RingLoader, GridLoader, RippleLoader, RotateLoader, BoxLoader } from 'load-animations-react'
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import Github from '../assets/GitHub-Mark.png'
 import Npm from '../assets/Npm-logo.svg'
 
 const Demo = () => {
     const [color, setColor] = useState("black")
+    const nameRef = useRef()
 
     return (
         <>
             <div className="flex flex-col align-center items-center justify-center">
                 <p className='text-center mb-1 font-semibold mt-5 lg:mt-10'>Enter the colour</p>
                 <input type="text"
+                    autoFocus
+                    ref={nameRef}
+                    style={{ width: "300px" }}
                     className='border-2 text-center border-blue-600 outline-none p-1 rounded'
                     onChange={(e) => {
+                        if (!nameRef.current.value)
+                            setColor("black")
+
                         if (!e.target.value)
                             return
+
                         setColor(e.target.value)
                         // console.log(color);
                     }} />
                 <button
                     className="bg-blue-700 hover:bg-blue-500 text-white mt-2 py-2 px-4 rounded align-center"
                     style={{ outline: "none", border: "0" }}
-                    onClick={() => setColor("black")}>
+                    onClick={() => {
+                        nameRef.current.value = ""
+                        setColor("black")
+                    }}
+                >
                     Reset
                 </button>
             </div>
@@ -117,11 +129,9 @@ const Demo = () => {
             <div className="bg-black flex lg:hidden justify-between items-center p-3 mt-5 ">
                 <a href="https://github.com/HariKrishna-28/load-animations-react" target="_blank" rel="noreferrer">
                     <img src={Github} width="40px" className='mr-2' style={{ borderRadius: "50%" }} alt='github' />
-
                 </a>
                 <a href="https://www.npmjs.com/package/load-animations-react" target="_blank" rel="noreferrer">
                     <img src={Npm} width="60px" className='mr-2' alt='npm' />
-
                 </a>
             </div>
         </>
