@@ -39,11 +39,27 @@ const Demo = () => {
 
             <div className='flex flex-col align-center justify-between items-center mt-5'>
                 <div >
-                    <div className='grid grid-cols-2 lg:grid-cols-4 gap-12'>
+
+                    <div className='grid grid-cols-2 lg:grid-cols-5 gap-12'>
+
+                        <div className="flex flex-col my-2">
+                            <p className='text-center mt-2 mb-2'>FlipLoader</p>
+                            <div className="flex align-center items-center justify-center">
+                                <FlipLoader color={color} />
+                            </div>
+                        </div>
+
                         <div className="flex flex-col my-2">
                             <p className='text-center mt-2 mb-2'>CircleLoader</p>
                             <div className="flex align-center items-center justify-center">
                                 <CircleLoader color={color} />
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col my-2">
+                            <p className='text-center mt-2 mb-2'>ScaleLoader</p>
+                            <div className="flex align-center items-center justify-center">
+                                <ScaleLoader color={color} />
                             </div>
                         </div>
 
@@ -98,28 +114,9 @@ const Demo = () => {
                             </div>
                         </div>
 
-                        <div className="flex lg:hidden align-center items-center justify-center">
-                            <div className="flex flex-col my-2">
-                                <p className='text-center mt-2 mb-2'>ScaleLoader</p>
-                                <div className="flex align-center items-center justify-center">
-                                    <ScaleLoader color={color} />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="flex lg:hidden align-center items-center justify-center">
-                            <div className="flex flex-col my-2">
-                                <p className='text-center mt-2 mb-2'>FlipLoader</p>
-                                <div className="flex align-center items-center justify-center">
-                                    <FlipLoader color={color} />
-                                </div>
-                            </div>
-                        </div>
-
-
                     </div>
 
-                    <div className="hidden lg:flex items-center justify-center align-center mt-4 gap-12">
+                    {/* <div className="hidden lg:flex items-center justify-center align-center mt-4 gap-12">
 
                         <div className="flex flex-col my-2">
                             <p className='text-center mt-2 mb-2'>ScaleLoader</p>
@@ -134,7 +131,7 @@ const Demo = () => {
                                 <FlipLoader color={color} />
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* <div className="flex flex-col my-2">
                             <p className='text-center mt-2 mb-2'>RippleLoader</p>
