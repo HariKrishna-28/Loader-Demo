@@ -1,4 +1,4 @@
-import { CircleLoader, EllipsisLoader, FaceBookLoader, RingLoader, GridLoader, RippleLoader, RotateLoader, BoxLoader } from 'load-animations-react'
+import { CircleLoader, FlipLoader, ScaleLoader, EllipsisLoader, FaceBookLoader, RingLoader, GridLoader, RippleLoader, RotateLoader, BoxLoader } from 'load-animations-react'
 import React, { useState, useRef } from 'react'
 import Github from '../assets/GitHub-Mark.png'
 import Npm from '../assets/Npm-logo.svg'
@@ -24,7 +24,6 @@ const Demo = () => {
                             return
 
                         setColor(e.target.value)
-                        // console.log(color);
                     }} />
                 <button
                     className="bg-blue-700 hover:bg-blue-500 text-white mt-2 py-2 px-4 rounded align-center"
@@ -38,7 +37,7 @@ const Demo = () => {
                 </button>
             </div>
 
-            <div className='flex flex-ccol align-center justify-center items-center mt-5'>
+            <div className='flex flex-col align-center justify-between items-center mt-5'>
                 <div >
                     <div className='grid grid-cols-2 lg:grid-cols-4 gap-12'>
                         <div className="flex flex-col my-2">
@@ -99,25 +98,45 @@ const Demo = () => {
                             </div>
                         </div>
 
+                        <div className="flex lg:hidden align-center items-center justify-center">
+                            <div className="flex flex-col my-2">
+                                <p className='text-center mt-2 mb-2'>ScaleLoader</p>
+                                <div className="flex align-center items-center justify-center">
+                                    <ScaleLoader color={color} />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="flex lg:hidden align-center items-center justify-center">
+                            <div className="flex flex-col my-2">
+                                <p className='text-center mt-2 mb-2'>FlipLoader</p>
+                                <div className="flex align-center items-center justify-center">
+                                    <FlipLoader color={color} />
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
 
-                    {/* <div className="hidden lg:flex items-center justify-center align-center mt-4 gap-12">
+                    <div className="hidden lg:flex items-center justify-center align-center mt-4 gap-12">
 
                         <div className="flex flex-col my-2">
-                            <p className='text-center mt-2 mb-2'>RotateLoader</p>
+                            <p className='text-center mt-2 mb-2'>ScaleLoader</p>
                             <div className="flex align-center items-center justify-center">
-                                <RotateLoader color={color} />
+                                <ScaleLoader color={color} />
                             </div>
                         </div>
 
-                        <div className="flex flex-col my-2">
-                            <p className='text-center mt-2 mb-2'>GridLoader</p>
+                        <div className="hidden lg:flex flex-col my-2">
+                            <p className='text-center mt-2 mb-2'>FlipLoader</p>
                             <div className="flex align-center items-center justify-center">
-                                <GridLoader color={color} />
+                                <FlipLoader color={color} />
                             </div>
                         </div>
+                    </div>
 
-                        <div className="flex flex-col my-2">
+                    {/* <div className="flex flex-col my-2">
                             <p className='text-center mt-2 mb-2'>RippleLoader</p>
                             <div className="flex align-center items-center justify-center">
                                 <RippleLoader color={color} />
