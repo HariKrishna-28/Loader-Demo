@@ -1,4 +1,4 @@
-import { CircleLoader, FlipLoader, ScaleLoader, EllipsisLoader, FaceBookLoader, RingLoader, GridLoader, RippleLoader, RotateLoader, BoxLoader } from 'load-animations-react'
+import { CircleLoader, FlipLoader, ScaleLoader, EllipsisLoader, FaceBookLoader, RingLoader, GridLoader, RippleLoader, RotateLoader, BoxLoader, ClimbLoader, BlockLoader } from 'load-animations-react'
 import React, { useState, useRef } from 'react'
 import Github from '../assets/GitHub-Mark.png'
 import Npm from '../assets/Npm-logo.svg'
@@ -40,12 +40,19 @@ const Demo = () => {
             <div className='flex flex-col align-center justify-between items-center mt-5'>
                 <div >
 
-                    <div className='grid grid-cols-2 lg:grid-cols-5 gap-12'>
+                    <div className='grid grid-cols-2 lg:grid-cols-6 gap-12'>
 
                         <div className="flex flex-col my-2">
                             <p className='text-center mt-2 mb-2'>FlipLoader</p>
                             <div className="flex align-center items-center justify-center">
                                 <FlipLoader color={color} />
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col my-2">
+                            <p className='text-center mt-2 mb-2'>BlockLoader</p>
+                            <div className="flex align-center items-center justify-center">
+                                <BlockLoader color={color} />
                             </div>
                         </div>
 
@@ -111,6 +118,13 @@ const Demo = () => {
                                 <div className="flex align-center items-center justify-center">
                                     <RippleLoader color={color} />
                                 </div>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col my-2">
+                            <p className='text-center mt-2 mb-10'>ClimbLoader</p>
+                            <div className="flex align-center items-center justify-center">
+                                <ClimbLoader color={color} />
                             </div>
                         </div>
 
