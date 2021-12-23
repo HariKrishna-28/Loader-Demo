@@ -127,7 +127,6 @@ const Demo = () => {
                                 <ClimbLoader color={color} />
                             </div>
                         </div>
-
                     </div>
 
                     {/* <div className="hidden lg:flex items-center justify-center align-center mt-4 gap-12">
