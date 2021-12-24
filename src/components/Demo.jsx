@@ -127,6 +127,7 @@ const Demo = () => {
                                 <ClimbLoader color={color} />
                             </div>
                         </div>
+
                     </div>
 
                     {/* <div className="hidden lg:flex items-center justify-center align-center mt-4 gap-12">
@@ -146,13 +147,6 @@ const Demo = () => {
                         </div>
                     </div> */}
 
-                    {/* <div className="flex flex-col my-2">
-                            <p className='text-center mt-2 mb-2'>RippleLoader</p>
-                            <div className="flex align-center items-center justify-center">
-                                <RippleLoader color={color} />
-                            </div>
-                        </div>
-                    </div> */}
                 </div>
             </div>
             <div className="bg-black flex lg:hidden justify-between items-center p-3 mt-5 ">
